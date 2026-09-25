@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "User profile and settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "peerId": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["uid", "displayName"]
+    },
+    "cloudChats": {
+      "title": "Cloud Chat",
+      "description": "Cloud backed chat rooms, direct links, and P2P rendezvous across 1000km",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "lastMessage": { "type": "string" },
+        "lastMessageTime": { "type": "number" },
+        "members": { "type": "array" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "ownerId", "name"]
+    },
+    "cloudMessages": {
+      "title": "Cloud Message",
+      "description": "Real-time messages synced between friends across any distance with E2EE",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "chatId": { "type": "string" },
+        "senderId": { "type": "string" },
+        "senderName": { "type": "string" },
+        "senderAvatarColor": { "type": "string" },
+        "text": { "type": "string" },
+        "type": { "type": "string" },
+        "attachments": { "type": "array" },
+        "timestamp": { "type": "number" },
+        "status": { "type": "string" },
+        "isAI": { "type": "boolean" },
+        "sources": { "type": "array" }
+      },
+      "required": ["id", "chatId", "senderId", "text", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/users" },
+      "description": "User profile document"
+    },
+    "/cloudChats/{chatId}": {
+      "schema": { "$ref": "#/entities/cloudChats" },
+      "description": "Cloud chat rooms and direct link rendezvous"
+    },
+    "/cloudMessages/{messageId}": {
+      "schema": { "$ref": "#/entities/cloudMessages" },
+      "description": "Real-time synced messages across distances"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #06090e;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", 'Plus Jakarta Sans', "Helvetica Neue", sans-serif;
+    letter-spacing: -0.012em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom iOS 26 Ultra-Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* iOS 26 Pro Liquid Glassmorphism Materials */
+.ios-glass {
+  background: rgba(15, 23, 42, 0.48);
+  backdrop-filter: blur(36px) saturate(210%);
+  -webkit-backdrop-filter: blur(36px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.ios-glass-subtle {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.ios-glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.ios-island {
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(40px) saturate(220%);
+  -webkit-backdrop-filter: blur(40px) saturate(220%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.65), inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.ios-glass-bubble-outgoing {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.42) 0%, rgba(37, 99, 235, 0.48) 100%);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.22), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.55);
+}
+
+.ios-glass-bubble-incoming {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), inset 0 1.5px 1px rgba(255, 255, 255, 0.4);
+}
+
+.ios-glass-dock {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(40px) saturate(210%);
+  -webkit-backdrop-filter: blur(40px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 1.5px 1.5px rgba(255, 255, 255, 0.45);
+}
+
+.ios-glass-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ios-glass-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+.ios-glass-btn:active {
+  transform: scale(0.96);
+}
+
+/* Apple Spring Motion Transitions */
+.spring-transition {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ios-tap-press {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), filter 0.15s ease;
+}
+.ios-tap-press:active {
+  transform: scale(0.96);
+  filter: brightness(0.92);
+}
+
+/* Dynamic Live Wallpapers Inspired by User Mockups */
+.wallpaper-ios-liquid-cyan {
+  background: radial-gradient(circle at 15% 18%, rgba(56, 189, 248, 0.45) 0%, transparent 45%),
+              radial-gradient(circle at 82% 12%, rgba(59, 130, 246, 0.45) 0%, transparent 45%),
+              radial-gradient(circle at 45% 85%, rgba(20, 184, 166, 0.35) 0%, transparent 55%),
+              radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
+              linear-gradient(155deg, #091e3a 0%, #15325b 35%, #0c2445 70%, #051329 100%);
+  background-attachment: fixed;
+}
+
+.wallpaper-ios-liquid-sunset {
+  background: radial-gradient(circle at 20% 25%, rgba(249, 115, 22, 0.42) 0%, transparent 45%),
+              radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.45) 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.35) 0%, transparent 55%),
+              linear-gradient(140deg, #1f102e 0%, #2e1058 50%, #0d0926 100%);
+  background-attachment: fixed;
+}
+
+.wallpaper-ios-frost-silver {
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18) 0%, transparent 45%),
+              radial-gradient(circle at 80% 80%, rgba(148, 163, 184, 0.22) 0%, transparent 50%),
+              linear-gradient(150deg, #1e293b 0%, #0f172a 60%, #030712 100%);
+  background-attachment: fixed;
+}
+
+.wallpaper-ios-dark-glass {
+  background: radial-gradient(circle at 50% 20%, rgba(30, 41, 59, 0.6) 0%, transparent 50%),
+              linear-gradient(180deg, #090d14 0%, #03060a 100%);
+  background-attachment: fixed;
+}
+
+.wallpaper-aurora {
+  background: radial-gradient(circle at 18% 18%, rgba(14, 165, 233, 0.18) 0%, transparent 45%),
+              radial-gradient(circle at 82% 78%, rgba(147, 51, 234, 0.18) 0%, transparent 45%),
+              radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.09) 0%, transparent 55%),
+              #070a0f;
+}
+
+.wallpaper-stars {
+  background-color: #05070a;
+  background-image: radial-gradient(white 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.6) 1px, transparent 1px);
+  background-size: 36px 36px, 72px 72px;
+  background-position: 0 0, 18px 18px;
+}
+
+.wallpaper-neon-grid {
+  background-color: #050811;
+  background-image: linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.wallpaper-clean-mesh {
+  background: linear-gradient(135deg, #090d16 0%, #111827 50%, #070b13 100%);
+}
+
+.wallpaper-glass-dark {
+  background: #040609;
+}
+
+/* Discord Speaking Pulse Ring */
+@keyframes speaking-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.8);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.speaking-ring {
+  animation: speaking-glow 1.4s infinite;
+  border-color: #22c55e !important;
+}
+
+/* Discord Spoilers */
+.spoiler-text {
+  filter: blur(6px);
+  transition: filter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+.spoiler-text.revealed {
+  filter: none;
+  user-select: text;
+}

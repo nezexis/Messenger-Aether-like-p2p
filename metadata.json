@@ -1,0 +1,10 @@
+{
+  "name": "Aether P2P — Serverless Messenger",
+  "description": "Серверный-независимый P2P мессенджер нового поколения в стиле iOS 26.3 и Telegram с функциями и настройками Discord: прямой WebRTC DataChannel, звонки, голосовые комнаты, E2EE шифрование и мгновенная отправка без потерь.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "display-capture"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
